@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace TransactionalDbContext
 {
-    public class TransactionalDbContext : DbContext
+    public class ReadCommittedDbContext : DbContext
     {
         private DbContextTransaction _currentTransaction;
 
@@ -21,7 +21,6 @@ namespace TransactionalDbContext
             }
             catch (Exception)
             {
-                // todo: log transaction exception
                 throw;
             }
         }
@@ -46,7 +45,6 @@ namespace TransactionalDbContext
             }
             catch (Exception)
             {
-                // todo: log exception
                 if (_currentTransaction?.UnderlyingTransaction.Connection != null)
                 {
                     _currentTransaction.Rollback();
