@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/colinmxs/TransactionalDbContext</projectUrl>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes>Changed the class name to be more specific.</releaseNotes>
     <copyright>Copyright 2017 Colin Smith</copyright>
     <tags>EF6 entity framework transactional dbcontext</tags>
   </metadata>
